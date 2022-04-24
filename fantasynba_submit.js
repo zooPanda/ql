@@ -1,6 +1,6 @@
 /**
 梦幻NBA 提交队伍
-55 23 * * *
+cron 55 23 * * *
 **/
 
 const axios = require("axios").default

@@ -1,5 +1,6 @@
 /**
 梦幻NBA cookie保活
+cron '*\/2 * * *'
 **/
 
 const axios = require("axios").default
