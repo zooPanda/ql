@@ -20,7 +20,7 @@ const position = {
 
 const Cookie = process.env.NBA_TOKEN
 
-let notify = md + "\n"
+let notify = "*梦幻NBA*\n" + md + "\n"
 
 
 async function getPlayerList() {
@@ -270,10 +270,5 @@ async function main() {
     await submitTeam(c)
 }
 main().catch(async err => {
-    await axios.post("https://api.telegram.org/bot5098483785:AAGCWpDcrJrq3kn0y30CSwz4C7VdaqvpwuQ/sendMessage", {
-        chat_id: 5064775862,
-        text: "梦幻NBA出错了," + err.message || "未知的错误"
-    }).catch(err => {
-        console.log(err.message);
-    })
+    send(`*梦幻NBA*\m${err.message}`)
 })
